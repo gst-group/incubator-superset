@@ -36,6 +36,10 @@ from flask_appbuilder.security.manager import AUTH_DB
 from superset.stats_logger import DummyStatsLogger
 from superset.utils.logging_configurator import DefaultLoggingConfigurator
 
+# GST_CONFIG
+SQLALCHEMY_GST_METADATA_DB_URI = 'mysql://root:guanshantech@106.15.35.240/test_superset'
+SQLALCHEMY_GST_DEFAULT_DB_URI = 'mysql://root:guanshantech@106.15.35.240/dwiformmaster'
+
 # Realtime stats logger, a StatsD implementation exists
 STATS_LOGGER = DummyStatsLogger()
 
@@ -92,9 +96,11 @@ SQLALCHEMY_TRACK_MODIFICATIONS = False
 SECRET_KEY = "\2\1thisismyscretkey\1\2\e\y\y\h"  # noqa
 
 # The SQLAlchemy connection string.
-SQLALCHEMY_DATABASE_URI = "sqlite:///" + os.path.join(DATA_DIR, "superset.db")
+SQLALCHEMY_DATABASE_URI = SQLALCHEMY_GST_METADATA_DB_URI
+# SQLALCHEMY_DATABASE_URI = "sqlite:///" + os.path.join(DATA_DIR, "superset.db")
 # SQLALCHEMY_DATABASE_URI = 'mysql://myapp@localhost/myapp'
 # SQLALCHEMY_DATABASE_URI = 'postgresql://root:password@localhost/myapp'
+
 
 # In order to hook up a custom password store for all SQLACHEMY connections
 # implement a function that takes a single argument of type 'sqla.engine.url',

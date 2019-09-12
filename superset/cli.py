@@ -48,8 +48,9 @@ def make_shell_context():
 @app.cli.command()
 def init():
     """Inits the Superset application"""
-    utils.get_or_create_main_db()
-    utils.get_example_database()
+    # utils.get_or_create_main_db()
+    # utils.get_example_database()
+    utils.get_gst_database()
     appbuilder.add_permissions(update_perms=True)
     security_manager.sync_role_definitions()
 

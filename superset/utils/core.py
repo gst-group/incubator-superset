@@ -957,6 +957,12 @@ def get_or_create_db(database_name, sqlalchemy_uri, *args, **kwargs):
     return database
 
 
+def get_gst_database():
+    from superset import conf
+
+    return get_or_create_db("GST-DB", conf.get("SQLALCHEMY_GST_DEFAULT_DB_URI"))
+
+
 def get_main_database():
     from superset import conf
 
