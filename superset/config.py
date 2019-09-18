@@ -37,8 +37,17 @@ from superset.stats_logger import DummyStatsLogger
 from superset.utils.logging_configurator import DefaultLoggingConfigurator
 
 # GST_CONFIG
-SQLALCHEMY_GST_METADATA_DB_URI = 'mysql://root:guanshantech@106.15.35.240/test_superset'
-SQLALCHEMY_GST_DEFAULT_DB_URI = 'mysql://root:guanshantech@106.15.35.240/dwiformmaster'
+GST_METADATA_DB_URI = 'mysql://root:guanshantech@106.15.35.240/test_superset'
+GST_DEFAULT_DBS = {
+    'gst-test-db': 'mysql://root:guanshantech@106.15.35.240/dwiformmaster',
+    'gst-test-db2': 'mysql://root:guanshantech@106.15.35.240/dbiformmaster',
+}
+GST_DEFAULT_TABLES = [
+    'gst-test-db.address',
+    'gst-test-db.answer',
+    'gst-test-db2.chart',
+    'gst-test-db2.company',
+]
 
 # Realtime stats logger, a StatsD implementation exists
 STATS_LOGGER = DummyStatsLogger()
@@ -96,7 +105,7 @@ SQLALCHEMY_TRACK_MODIFICATIONS = False
 SECRET_KEY = "\2\1thisismyscretkey\1\2\e\y\y\h"  # noqa
 
 # The SQLAlchemy connection string.
-SQLALCHEMY_DATABASE_URI = SQLALCHEMY_GST_METADATA_DB_URI
+SQLALCHEMY_DATABASE_URI = GST_METADATA_DB_URI
 # SQLALCHEMY_DATABASE_URI = "sqlite:///" + os.path.join(DATA_DIR, "superset.db")
 # SQLALCHEMY_DATABASE_URI = 'mysql://myapp@localhost/myapp'
 # SQLALCHEMY_DATABASE_URI = 'postgresql://root:password@localhost/myapp'

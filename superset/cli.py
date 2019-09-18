@@ -50,7 +50,8 @@ def init():
     """Inits the Superset application"""
     # utils.get_or_create_main_db()
     # utils.get_example_database()
-    utils.get_gst_database()
+    utils.get_or_create_gst_database()
+    utils.get_or_create_gst_table()
     appbuilder.add_permissions(update_perms=True)
     security_manager.sync_role_definitions()
 
