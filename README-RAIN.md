@@ -48,3 +48,9 @@ superset db upgrade
 # Create default roles and permissions
 superset init
 ```
+
+### 多表关联查询解决方案
+优先在数据库中建立`view`，再按`table`添加进`superset`
+```shell script
+create view `test-view` as select a.*, b.* from a join b on ...
+```
