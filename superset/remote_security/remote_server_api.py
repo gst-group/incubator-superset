@@ -5,10 +5,40 @@ import base64
 
 logger = logging.getLogger(__name__)
 
-def authenticate(username, password):
+def authenticate_with_token(token):
+	server_url = "http://106.15.35.240:5001/iformmaster"
+	auth_url = '%s/appuser/loginWithToken' % server_url
+	param_dict = dict()
+	headers = {'content-type': 'application/json' , 'access_token':token}
+	# requests.post(url, params=params, data=json.dumps(data), headers=headers)
+	auth_result = requests.post(
+		auth_url, json=param_dict, headers=headers, verify=False)
+	response_data = json.loads(auth_result.text)
+	logger.info(json.dumps(response_data))
+	if auth_result.status_code != 200:
+		logger.warn("failed to auth user:status: %s, response: %s " %
+					(auth_result.status_code, auth_result.text))
+		return None
+	if "errCode" in response_data and response_data["errCode"] == 999:
+		logger.warn("failed to auth message: %s, response: %s " %
+					(response_data["errMessage"], auth_result.text))
+		return None
+	if not response_data["data"]:
+		return None
+	result_dict = auth_result.json()
+	userinfo = dict(
+		username=response_data["data"]["telephone"],
+		first_name=response_data["data"]["nickName"],
+		last_name='',
+		email=response_data["data"]["email"])
+	return userinfo
 
-	server_url = "http://cemtest.insight365.ai:5001"
-	auth_url = '%s/session/appuser/login' % server_url
+
+def authenticate(username, password):
+	#server_url = "http://cemtest.insight365.ai:5001"
+	#auth_url = '%s/session/appuser/login' % server_url
+	server_url = "http://106.15.35.240:5001/iformmaster"
+	auth_url = '%s/appuser/login' % server_url
 	encodedPassword = str(base64.b64encode(password.encode("utf-8")), "utf-8")
 
 

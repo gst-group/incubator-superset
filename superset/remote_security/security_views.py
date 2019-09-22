@@ -12,7 +12,7 @@ from flask_babel import lazy_gettext
 from flask_login import login_user
 from wtforms import StringField, PasswordField
 from wtforms.validators import Required
-
+from flask import request
 # import the remote server here
 # remote server API to authenticate username
 from . import remote_server_api
@@ -37,6 +37,19 @@ class MyAuthRemoteUserView(AuthRemoteUserView):
     login_template = 'appbuilder/general/security/login.html'
     title = "账号登陆"
 
+    def process_user(self, my_user):
+        # if my_user is authenticated
+        if my_user:
+            user = self.appbuilder.sm.auth_user_remote_user(
+                my_user.get('username'))
+            if user is None:
+                flash(as_unicode(self.invalid_login_message), 'warning')
+            else:
+                login_user(user)
+                return redirect(self.appbuilder.get_url_for_index)
+        else:
+            flash(as_unicode(self.invalid_login_message), 'warning')
+
     # this method is going to overwrite 
     # https://github.com/dpgaspar/Flask-AppBuilder/blob/master/flask_appbuilder/security/views.py#L556
     @expose('/login/', methods=['GET', 'POST'])
@@ -46,22 +59,21 @@ class MyAuthRemoteUserView(AuthRemoteUserView):
             return redirect(self.appbuilder.get_url_for_index)
 
         form = MyLoginForm()
-
-        if form.validate_on_submit():
-            logger.info("going to auth MY user: %s" % form.telephone.data)
-            my_user = remote_server_api.authenticate(form.telephone.data,
-                                            form.password.data)
-            # if my_user is authenticated                          
+        my_user = None
+        result = None
+        token = request.args.get('access_token')
+        if request.method == "GET" and token:
+            my_user = remote_server_api.authenticate_with_token(token)
             if my_user:
-                user = self.appbuilder.sm.auth_user_remote_user(
-                    my_user.get('username'))
-                if user is None:
-                    flash(as_unicode(self.invalid_login_message), 'warning')
-                else:
-                    login_user(user)
-                    return redirect(self.appbuilder.get_url_for_index)
-            else:
-                flash(as_unicode(self.invalid_login_message), 'warning')
+                result= self.process_user(my_user)
+                if result:
+                    return result;
+        elif form.validate_on_submit():
+            logger.info("going to auth MY user: %s" % form.telephone.data)
+            my_user = remote_server_api.authenticate(form.telephone.data, form.password.data)
+            result= self.process_user(my_user)
+            if result:
+                return result;
         else:
             if form.errors.get('telephone') is not None:
                 flash(
