@@ -936,6 +936,61 @@ def user_label(user: User) -> Optional[str]:
     return None
 
 
+def get_or_create_gst_database():
+    from superset import conf
+
+    default_dbs = conf.get("GST_DEFAULT_DBS")
+    for db_name in default_dbs:
+        get_or_create_db(db_name, default_dbs[db_name])
+
+    return None
+
+
+def get_or_create_gst_table():
+    from superset import conf
+
+    default_tables = conf.get("GST_DEFAULT_TABLES")
+    for default_table in default_tables:
+        get_or_create_table(default_table.split(".")[0], default_table.split(".")[1])
+
+    return None
+
+
+def get_or_create_table(database_name, table_name, *args, **kwargs):
+    from superset import db
+    from superset.models import core as models
+    from superset.connectors.sqla.models import SqlaTable
+    from superset.connectors.sqla.models import TableColumn
+
+    database = (
+        db.session.query(models.Database).filter_by(database_name=database_name).first()
+    )
+    if not database:
+        logging.warning("No such a database: %s", database)
+        return None
+
+    database_id = database.id
+    table = (
+        db.session.query(SqlaTable).filter_by(table_name=table_name, database_id=database_id).first()
+    )
+    if not table:
+        logging.info(f"Creating table reference for {database_name}.{table_name}")
+        table = SqlaTable(database=database, table_name=table_name, *args, **kwargs)
+        db.session.add(table)
+
+        # Delete existing table columns
+        table_id = table.id
+        db.session.query(TableColumn).filter_by(table_id=table_id).delete()
+
+        table_column_dict_list = database.get_columns(table_name=table_name)
+        for table_column_dict in table_column_dict_list:
+            table_column = TableColumn(table=table, column_name=table_column_dict['name'], type=table_column_dict['type'])
+            db.session.add(table_column)
+        db.session.commit()
+
+    return table
+
+
 def get_or_create_main_db():
     get_main_database()
 
@@ -955,12 +1010,6 @@ def get_or_create_db(database_name, sqlalchemy_uri, *args, **kwargs):
     database.set_sqlalchemy_uri(sqlalchemy_uri)
     db.session.commit()
     return database
-
-
-def get_gst_database():
-    from superset import conf
-
-    return get_or_create_db("GST-DB", conf.get("SQLALCHEMY_GST_DEFAULT_DB_URI"))
 
 
 def get_main_database():
