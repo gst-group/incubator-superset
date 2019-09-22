@@ -570,6 +570,7 @@ class SupersetSecurityManager(SecurityManager):
         self.set_role("Gamma", self._is_gamma_pvm)
         self.set_role("granter", self._is_granter_pvm)
         self.set_role("sql_lab", self._is_sql_lab_pvm)
+        self.set_role("gst_user", self._is_gst_pvm)
 
         if conf.get("PUBLIC_ROLE_LIKE_GAMMA", False):
             self.set_role("Public", self._is_gamma_pvm)
@@ -724,6 +725,25 @@ class SupersetSecurityManager(SecurityManager):
         """
 
         return pvm.permission.name in {"can_override_role_permissions", "can_approve"}
+
+    def _is_gst_pvm(self, pvm: PermissionModelView) -> bool:
+        """
+        Return True if the FAB permission/view is Gst user related, False
+        otherwise.
+
+        :param pvm: The FAB permission/view
+        :returns: Whether the FAB object is Gst related
+        """
+
+        from superset import conf
+
+        gst_role_view_menus = conf.get("GST_ROLE_VIEW_MENUS")
+        gst_role_permissions = conf.get("GST_ROLE_PERMISSIONS")
+
+        return (
+            pvm.view_menu.name in gst_role_view_menus
+            # or pvm.permission.name in gst_role_permissions
+        )
 
     def set_perm(
         self, mapper: Mapper, connection: Connection, target: "BaseDatasource"

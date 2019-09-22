@@ -148,7 +148,7 @@ APP_ICON_WIDTH = 126
 
 # Uncomment to specify where clicking the logo would take the user
 # e.g. setting it to '/welcome' would take the user to '/superset/welcome'
-LOGO_TARGET_PATH = None
+LOGO_TARGET_PATH = '/welcome'
 
 # Druid query timezone
 # tz.tzutc() : Using utc timezone
