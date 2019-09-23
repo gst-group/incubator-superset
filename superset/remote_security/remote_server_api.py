@@ -35,10 +35,10 @@ def authenticate_with_token(token):
 
 
 def authenticate(username, password):
-	#server_url = "http://cemtest.insight365.ai:5001"
-	#auth_url = '%s/session/appuser/login' % server_url
-	server_url = "http://106.15.35.240:5001/iformmaster"
-	auth_url = '%s/appuser/login' % server_url
+	server_url = "http://cemtest.insight365.ai:5001"
+	auth_url = '%s/session/appuser/login' % server_url
+	#server_url = "http://106.15.35.240:5001/iformmaster"
+	#auth_url = '%s/appuser/login' % server_url
 	encodedPassword = str(base64.b64encode(password.encode("utf-8")), "utf-8")
 
 
