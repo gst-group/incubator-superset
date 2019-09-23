@@ -209,7 +209,7 @@ def validate_json(form, field):  # noqa
 
 
 class YamlExportMixin(object):
-    @action("yaml_export", __("Export to YAML"), __("Export to YAML?"), "fa-download")
+    # @action("yaml_export", __("Export to YAML"), __("Export to YAML?"), "fa-download")
     def yaml_export(self, items):
         if not isinstance(items, list):
             items = [items]
