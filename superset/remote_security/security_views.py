@@ -11,7 +11,7 @@ from flask_appbuilder.security.views import AuthRemoteUserView, expose
 from flask_babel import lazy_gettext
 from flask_login import login_user
 from wtforms import StringField, PasswordField
-from wtforms.validators import Required
+from wtforms.validators import DataRequired
 from flask import request
 # import the remote server here
 # remote server API to authenticate username
@@ -27,16 +27,14 @@ class MyLoginForm(DynamicForm):
     more options could be set here
     """
     telephone = StringField(
-        lazy_gettext('telephone'), validators=[Required()])
-    password = PasswordField(lazy_gettext("Password"), validators=[Required()])
+        lazy_gettext('telephone'), validators=[DataRequired()])
+    password = PasswordField(lazy_gettext("password"), validators=[DataRequired()])
 
 
 class MyAuthRemoteUserView(AuthRemoteUserView):
     # this front-end template should be put under the folder `superset/templates/appbuilder/general/security`
     # so that superset could find this templates to render
     login_template = 'appbuilder/general/security/login.html'
-    title = "账号登陆"
-
     def process_user(self, my_user):
         # if my_user is authenticated
         if my_user:
@@ -81,6 +79,5 @@ class MyAuthRemoteUserView(AuthRemoteUserView):
 
         return self.render_template(
             self.login_template,
-            title=self.title,
             form=form,
             appbuilder=self.appbuilder)

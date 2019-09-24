@@ -83,8 +83,8 @@ class DashboardTable extends React.PureComponent {
         </Table>
       );
     }
-
-    return <Loading />;
+    return null;
+    // return <Loading />;
   }
 }
 

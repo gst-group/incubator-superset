@@ -5362,3 +5362,24 @@ msgstr "线宽"
 
 #~ msgid "Cannot find User %(name)s, please ask your admin to create one."
 #~ msgstr "找不到用户 %(name)s，请您让管理员创建一个。"
+
+
+#: superset/templates/appbuilder/general/security/login.py:18
+msgid "Please login with Guanshan account"
+msgstr "请使用观山账号登录"
+
+#: superset/templates/appbuilder/general/security/login.py:20
+msgid "Account"
+msgstr "账号"
+
+#: superset/templates/appbuilder/general/security/login.py:30
+msgid "Password"
+msgstr "密码"
+
+#: superset/templates/appbuilder/general/security/login.py:12
+msgid "User Login"
+msgstr "用户登陆"
+
+#: superset/templates/appbuilder/general/security/login.py:46
+msgid "Login"
+msgstr "登陆"

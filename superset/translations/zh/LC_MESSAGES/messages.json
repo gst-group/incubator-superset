@@ -3330,7 +3330,25 @@
       ],
       "Saved Queries": [
         "已保存查询"
+      ],
+      "Please login with Guanshan account": [
+        "请使用观山账号登录"
+      ],
+      "Account": [
+        "账号"
+      ],
+      "Password": [
+        "密码"
+      ],
+      "User Login": [
+          "用户登陆"
+      ],
+       "Login": [
+          "登陆"
       ]
+
+
+
     }
   }
 }

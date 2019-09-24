@@ -9,15 +9,15 @@
     <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
         <div class="panel panel-primary" >
             <div class="panel-heading">
-                <div class="panel-title">{{ title }}</div>
+                <div class="panel-title">{{_("User Login")}}</div>
             </div>
             <div style="padding-top:30px" class="panel-body" >
 
                 <form class="form" action="" method="post" name="login">
                     {{form.hidden_tag()}}
-                    <div class="help-block">{{_("请使用观山账号登录")}}:</div>
+                    <div class="help-block">{{_("Please login with Guanshan account")}}:</div>
                     <div class="control-group{% if form.errors.telephone %} error{% endif %}">
-                        <label class="control-label" for="telephone">{{_("账号")}}:</label>
+                        <label class="control-label" for="telephone">{{_("Account")}}:</label>
 
                         <div class="controls">
                             <div class="input-group">
@@ -27,7 +27,7 @@
                             {% for error in form.errors.password %}
                             <span class="help-inline">[{{error}}]</span><br>
                             {% endfor %}
-                            <label class="control-label" for="password">{{_("密码")}}:</label>
+                            <label class="control-label" for="password">{{_("Password")}}:</label>
 
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-key"></i></span>
@@ -43,7 +43,7 @@
                         <div class="controls">
                             <br>
                             <div>
-                                <input class="btn btn-primary btn-block" type="submit" value="{{_('登陆')}}">
+                                <input class="btn btn-primary btn-block" type="submit" value="{{_('Login')}}">
                                 <!-- <a href="https://yourserver.com/sign_up?_src=superset" class="btn btn-block btn-primary" data-toggle="tooltip" rel="tooltip"
                                 title="{{_('If you are not already a user, please register')}}">
                                     {{_('Register')}}
