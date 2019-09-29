@@ -59,3 +59,9 @@ pybabel compile -d superset/translations -l zh
 ```shell script
 create view `test-view` as select a.*, b.* from a join b on ...
 ```
+
+### 部署&运行
+```shell script
+./pypi_push.sh
+pip install dist/apache-superset-1.0.0.tar.gz
+```
