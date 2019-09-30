@@ -71,6 +71,6 @@ scp ./dist/apache-superset-1.0.0.tar.gz root@101.132.163.207:/root/superset
 # 3.安装
 pip3 install apache-superset-1.0.0.tar.gz
 
-# 4.运行
-SUPERSET_CONFIG_PATH=gst_config.py superset run -h 0.0.0.0 -p 8088 --with-threads 
+# 4.后台运行
+SUPERSET_CONFIG_PATH=gst_config.py nohup superset run -h 0.0.0.0 -p 9000 --with-threads > superset.log &
 ```
