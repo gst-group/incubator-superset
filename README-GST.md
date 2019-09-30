@@ -1,4 +1,4 @@
-## 开发笔记
+## 开发
 
 ### 在Mac上安装`mysqlclient`
 - 安装`mysql-connector-c`
@@ -20,7 +20,7 @@ export CPPFLAGS="-I/usr/local/opt/openssl/include"
 pip install mysqlclient
 ```
 
-### 前端开发模式
+### 前端开发
 ```shell script
 cd superset/assets
 npm ci
@@ -28,7 +28,7 @@ npm ci
 npm run dev-server
 ```
 
-### 后端开发模式
+### 后端开发
 ```shell script
 pip install -r requirements.txt
 pip install -r requirements-dev.txt
@@ -37,7 +37,7 @@ pip install -e .
 FLASK_ENV=development superset run -p 8088 --with-threads --reload --debugger
 ```
 
-### 初始化Superset MateData DB
+### 初始化元数据库
 ```shell script
 # Create an admin user in your metadata database
 superset fab create-admin
@@ -62,6 +62,15 @@ create view `test-view` as select a.*, b.* from a join b on ...
 
 ### 部署&运行
 ```shell script
+# 1.构建
 ./pypi_push.sh
-pip install dist/apache-superset-1.0.0.tar.gz
+
+# 2.传输
+scp ./dist/apache-superset-1.0.0.tar.gz root@101.132.163.207:/root/superset
+
+# 3.安装
+pip3 install apache-superset-1.0.0.tar.gz
+
+# 4.运行
+SUPERSET_CONFIG_PATH=gst_config.py superset run -h 0.0.0.0 -p 8088 --with-threads 
 ```
