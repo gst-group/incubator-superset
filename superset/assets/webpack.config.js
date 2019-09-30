@@ -257,6 +257,7 @@ const config = {
     stats: { colors: true },
     overlay: true,
     port: devserverPort,
+    host: '0.0.0.0',
     // Only serves bundled files from webpack-dev-server
     // and proxy everything else to Superset backend
     proxy: {
