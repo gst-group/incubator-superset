@@ -36,6 +36,9 @@ from flask_appbuilder.security.manager import AUTH_DB
 from superset.stats_logger import DummyStatsLogger
 from superset.utils.logging_configurator import DefaultLoggingConfigurator
 
+from flask_appbuilder.security.manager import AUTH_REMOTE_USER
+from superset.remote_security.security_models import MySecurityManager
+
 # Realtime stats logger, a StatsD implementation exists
 STATS_LOGGER = DummyStatsLogger()
 
@@ -88,7 +91,7 @@ SUPERSET_WEBSERVER_TIMEOUT = 60
 
 SUPERSET_DASHBOARD_POSITION_DATA_LIMIT = 65535
 EMAIL_NOTIFICATIONS = False
-CUSTOM_SECURITY_MANAGER = None
+CUSTOM_SECURITY_MANAGER = MySecurityManager
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 # ---------------------------------------------------------
 
@@ -167,7 +170,8 @@ DRUID_ANALYSIS_TYPES = ["cardinality"]
 # AUTH_DB : Is for database (username/password()
 # AUTH_LDAP : Is for LDAP
 # AUTH_REMOTE_USER : Is for using REMOTE_USER from web server
-AUTH_TYPE = AUTH_DB
+# AUTH_TYPE = AUTH_DB
+AUTH_TYPE = AUTH_REMOTE_USER
 
 # Uncomment to setup Full admin role name
 # AUTH_ROLE_ADMIN = 'Admin'
@@ -224,7 +228,7 @@ LANGUAGES = {
 # Feature flags that are set by default go here. Their values can be
 # overwritten by those specified under FEATURE_FLAGS in super_config.py
 # For example, DEFAULT_FEATURE_FLAGS = { 'FOO': True, 'BAR': False } here
-# and FEATURE_FLAGS = { 'BAR': True, 'BAZ': True } in superset_config.py
+# and FEATURE_FLAGS = { 'BAR': True, 'BAZ': True } in local_config.py
 # will result in combined feature flags of { 'FOO': True, 'BAR': True, 'BAZ': True }
 DEFAULT_FEATURE_FLAGS = {
     # Experimental feature introducing a client (browser) cache
