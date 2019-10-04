@@ -19,6 +19,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
+import { t } from '@superset-ui/translation';
 
 import TableLoader from '../../components/TableLoader';
 
@@ -32,12 +33,14 @@ export default class RecentActivity extends React.PureComponent {
     const mutator = function (data) {
       return data
         .filter(row => row.action === 'dashboard' || row.action === 'explore')
-        .map(row => ({
-          name: <a href={row.item_url}>{row.item_title}</a>,
-          type: row.action,
-          time: moment.utc(row.time).fromNow(),
-          _time: row.time,
-        }));
+        .map(row => {
+          let setting = {}
+          setting[t('Name')] = <a href={row.item_url}>{row.item_title}</a>
+          setting[t('Type')] = row.action
+          setting[t('Time')] = moment.utc(row.time).fromNow()
+          setting['_time'] = row.time
+          return setting
+        });
     };
     return (
       <div>
