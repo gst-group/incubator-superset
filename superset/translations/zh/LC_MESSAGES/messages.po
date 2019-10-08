@@ -5402,3 +5402,38 @@ msgstr "用户登陆"
 #: superset/templates/appbuilder/general/security/login.py:46
 msgid "Login"
 msgstr "登陆"
+
+#: superset/templates/appbuilder/general/security/login.py:46
+msgid "Sorry, An error occurred"
+msgstr "运行出错"
+
+
+#: superset/templates/appbuilder/general/security/login.py:46
+msgid "rows retrieved"
+msgstr "行结果"
+
+
+
+#: superset/templates/appbuilder/general/security/login.py:46
+msgid "No data"
+msgstr "无数据"
+
+#: superset/templates/appbuilder/general/security/login.py:46
+msgid "View query"
+msgstr "查看查询"
+
+#: superset/templates/appbuilder/general/security/login.py:46
+msgid "View results"
+msgstr "查看结果"
+
+#: superset/templates/appbuilder/general/security/login.py:46
+msgid "View samples"
+msgstr "查看例子"
+
+#: superset/templates/appbuilder/general/security/login.py:46
+msgid "Run in SQL Lab"
+msgstr "在SQL Lab中运行"
+
+#: superset/templates/appbuilder/general/security/login.py:46
+msgid "Time range"
+msgstr "时间范围"

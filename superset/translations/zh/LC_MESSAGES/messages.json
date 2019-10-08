@@ -1300,6 +1300,9 @@
       "Time Grain": [
         "时间的粒度"
       ],
+      "Time range": [
+        "时间范围"
+      ],
       "The time granularity for the visualization. This applies a date transformation to alter your time column and defines a new time granularity. The options here are defined on a per database engine basis in the Superset source code.": [
         "可视化的时间粒度。这将应用日期转换来更改时间列，并定义新的时间粒度。这里的选项是在 Superset 源代码中的每个数据库引擎基础上定义的。"
       ],
@@ -3349,8 +3352,31 @@
       ],
       "Keyboard shortcuts": [
         "快捷键"
+    ],
+    "Sorry, An error occurred":[
+      "运行出错"
+    ],
+    "rows retrieved":[
+      "行结果"
+    ],
+    "No data":[
+      "无数据"
+    ],
+    "View query":[
+      "查看查询"
+    ],
+    "View results":[
+      "查看结果"
+    ],
+    "View samples":[
+      "查看例子"
+    ],
+    "Run in SQL Lab":[
+      "在SQL Lab中运行"
     ]
-
+    
+    
+    
     
     }
   }
