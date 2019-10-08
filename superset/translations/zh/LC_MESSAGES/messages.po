@@ -828,6 +828,10 @@ msgstr "运行选定的查询"
 msgid "Run Query"
 msgstr "运行查询"
 
+#: superset/assets/src/components/RefreshChartOverlay.jsx:26
+msgid "Keyboard shortcuts"
+msgstr "快捷键"
+
 #: superset/assets/src/SqlLab/components/RunQueryActionButton.jsx:36
 msgid "Run query synchronously"
 msgstr "同步运行查询"
@@ -4803,6 +4807,13 @@ msgstr ""
 "当单击“保存”或“覆盖”按钮时，这些参数会在视图中动态生成。高级用户可以在这里改"
 "变特定的参数。"
 
+#: superset/views/core.py:446
+msgid ""
+"The content here can be displayed as widget headers in the dashboard view. "
+"Supports <a href=\"https://daringfireball.net/projects/markdown/\">markdown</a>"
+msgstr ""
+"此处内容可在看板视图中显示，并且支持'<a href=\"https://daringfireball.net/projects/markdown/\">'markdown语法</a>"
+
 #: superset/views/core.py:452
 msgid "Duration (in seconds) of the caching timeout for this chart."
 msgstr "图表数据过期时间（秒）"
@@ -5067,6 +5078,10 @@ msgstr ""
 msgid "Allow Csv Upload"
 msgstr "允许Csv上传"
 
+#: superset/views/core.py:303
+msgid "Allow Multi Schema Metadata Fetch"
+msgstr "允许获取所有表和所有视图的列表"
+
 #: superset/views/core.py:288
 msgid "If selected, please set the schemas allowed for csv upload in Extra."
 msgstr "如果选择，请额外设置csv上传允许的模式。"
@@ -5074,6 +5089,10 @@ msgstr "如果选择，请额外设置csv上传允许的模式。"
 #: superset/views/core.py:301
 msgid "Asynchronous Query Execution"
 msgstr "异步执行查询"
+
+#: superset/views/core.py:301
+msgid "Backend"
+msgstr "后端"
 
 #: superset/views/core.py:237
 msgid ""

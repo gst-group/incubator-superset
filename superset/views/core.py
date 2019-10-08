@@ -364,11 +364,12 @@ class SliceModelView(SupersetModelView, DeleteMixin):  # noqa
     base_order = ("changed_on", "desc")
     description_columns = {
         "description": Markup(
-            "The content here can be displayed as widget headers in the "
-            "dashboard view. Supports "
-            '<a href="https://daringfireball.net/projects/markdown/"">'
-            "markdown</a>"
-        ),
+             _(
+         
+
+            "The content here can be displayed as widget headers in the dashboard view. "
+            "Supports <a href=\"https://daringfireball.net/projects/markdown/\">markdown</a>"
+        )),
         "params": _(
             "These parameters are generated dynamically when clicking "
             "the save or overwrite button in the explore view. This JSON "

@@ -3163,6 +3163,10 @@
       "These parameters are generated dynamically when clicking the save or overwrite button in the explore view. This JSON object is exposed here for reference and for power users who may want to alter specific parameters.": [
         "当单击“保存”或“覆盖”按钮时，这些参数会在视图中动态生成。高级用户可以在这里改变特定的参数。"
       ],
+      "The content here can be displayed as widget headers in the dashboard view. Supports <a href=\"https://daringfireball.net/projects/markdown/\">markdown</a>":[
+        "此处内容可在看板视图中显示，并且支持'<a href=\"https://daringfireball.net/projects/markdown/\">'markdown语法</a>"
+      ],
+
       "Duration (in seconds) of the caching timeout for this chart.": [
         "图表数据过期时间（秒）"
       ],
@@ -3343,12 +3347,11 @@
       "User Login": [
           "用户登陆"
       ],
-       "Login": [
-          "登陆"
-      ]
+      "Keyboard shortcuts": [
+        "快捷键"
+    ]
 
-
-
+    
     }
   }
 }
