@@ -781,6 +781,9 @@
       "click to edit title": [
         "点击编辑标题"
       ],
+      "Click to edit the datasource": [
+        "点击编辑数据源"
+      ],
       "You don't have the rights to alter this title.": [
         "你没有权利改变这个标题。"
       ],
@@ -948,6 +951,9 @@
       ],
       "Force refresh data": [
         "强制刷新数据"
+      ],
+      "Force refresh dashboard": [
+        "强制刷新看板"
       ],
       "Annotation layers are still loading.": [
         "注释层仍在加载。"
@@ -3373,10 +3379,84 @@
     ],
     "Run in SQL Lab":[
       "在SQL Lab中运行"
+    ],
+    "Emit Filter Events":[
+      "应用过滤"
+    ],
+    "Whether to apply filter when items are clicked":[
+      "点击时是否应用过滤"
+    ],
+    "Whether to include a client-side search box":[
+      "是否包含搜索框"
+    ],
+    "Customize":[
+      "定制化"
+    ],
+    "Data":[
+      "数据"
+    ],
+    "untitled dashboard":[
+      "无标题的看板"
+    ],
+    "Draft":[
+      "草稿"
+    ],
+    
+    "Published Dashboard":[
+      "已发布的看板"
+    ],
+    "Unpublished Dashboard":[
+      "未发布的看板"
+    ],
+    "Insert components":[
+      "插入组件"
+    ],
+    "Colors":[
+      "颜色"
+    ],
+    "Save changes":[
+      "保存更改"
+    ],
+    "Switch to view mode":[
+      "切换到视图模式"
+    ],
+    "Edit dashboard":[
+      "编辑看板"
+    ],
+    "Your charts & filters":[
+      "你的图表和过滤"
+    ],
+    "Your charts and filters":[
+      "你的图表和过滤"
+    ],
+    "Filter your charts":[
+      "过滤你的图表"
+    ],
+    "Tabs":[
+      "选项卡"
+    ],
+    "Row":[
+      "行"
+    ],
+    "Published":[
+      "已发布"
+    ],
+    "click to edit":[
+      "点击编辑"
+    ],
+    "Expand/collapse datasource configuration":[
+      "展开/折叠数据源配置"
+    ],
+    "Header":[
+      "表头"
+    ],
+    "Markdown":[
+      "Markdown标记"
+    ],
+    "Divider":[
+      "分割线"
     ]
-    
-    
-    
+
     
     }
   }

@@ -22,7 +22,8 @@ from flask_appbuilder.security.decorators import has_access
 from superset import appbuilder, db
 from superset.models import core as models
 from .base import BaseSupersetView
-
+from flask_babel import gettext as __
+from flask_babel import lazy_gettext as _
 
 class Dashboard(BaseSupersetView):
     """The base views for Superset!"""
@@ -32,7 +33,7 @@ class Dashboard(BaseSupersetView):
     def new(self):  # pylint: disable=no-self-use
         """Creates a new, blank dashboard and redirects to it in edit mode"""
         new_dashboard = models.Dashboard(
-            dashboard_title="[ untitled dashboard ]", owners=[g.user]
+            dashboard_title="[ "+ _("untitled dashboard") +" ]", owners=[g.user]
         )
         db.session.add(new_dashboard)
         db.session.commit()

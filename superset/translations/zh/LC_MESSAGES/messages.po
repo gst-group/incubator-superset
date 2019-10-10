@@ -1190,6 +1190,10 @@ msgstr "标题"
 msgid "click to edit title"
 msgstr "点击编辑标题"
 
+#: superset/assets/src/components/EditableTitle.jsx:105
+msgid "Click to edit the datasource"
+msgstr "点击编辑数据源"
+
 #: superset/assets/src/components/EditableTitle.jsx:106
 msgid "You don't have the rights to alter this title."
 msgstr "你没有权利改变这个标题。"
@@ -1228,6 +1232,10 @@ msgstr "强制刷新"
 #: superset/assets/src/dashboard/components/Controls.jsx:132
 msgid "Force refresh the whole dashboard"
 msgstr "强制刷新整个仪表板"
+
+#: superset/assets/src/dashboard/components/Controls.jsx:132
+msgid "Force refresh dashboard"
+msgstr "强制刷新仪表板"
 
 #: superset/assets/src/dashboard/components/Controls.jsx:140
 msgid "Set autorefresh"
@@ -4099,6 +4107,10 @@ msgstr "可分组"
 msgid "Filterable"
 msgstr "可过滤"
 
+#: superset/connectors/druid/views.py:54 superset/connectors/sqla/views.py:87
+msgid "Table"
+msgstr "表"
+
 #: superset/connectors/druid/views.py:55
 msgid "Count Distinct"
 msgstr "计数"
@@ -5437,3 +5449,103 @@ msgstr "在SQL Lab中运行"
 #: superset/templates/appbuilder/general/security/login.py:46
 msgid "Time range"
 msgstr "时间范围"
+
+#: superset/templates/appbuilder/general/security/login.py:46
+msgid "Emit Filter Events"
+msgstr "应用过滤"
+
+#: superset/templates/appbuilder/general/security/login.py:46
+msgid "Whether to apply filter when items are clicked"
+msgstr "点击时是否应用过滤"
+
+#: superset/templates/appbuilder/general/security/login.py:46
+msgid "Whether to include a client-side search box"
+msgstr "是否包含搜索框"
+
+#: superset/templates/appbuilder/general/security/login.py:46
+msgid "Customize"
+msgstr "定制化"
+
+#: superset/templates/appbuilder/general/security/login.py:46
+msgid "Data"
+msgstr "数据"
+
+#: superset/templates/appbuilder/general/security/login.py:46
+msgid "untitled dashboard"
+msgstr "无标题的看板"
+
+#: superset/templates/appbuilder/general/security/login.py:46
+msgid "Draft"
+msgstr "草稿"
+
+#: superset/templates/appbuilder/general/security/login.py:46
+msgid "Published Dashboard"
+msgstr "已发布的看板"
+
+#: superset/templates/appbuilder/general/security/login.py:46
+msgid "Unpublished Dashboard"
+msgstr "未发布的看板"
+
+#: superset/templates/appbuilder/general/security/login.py:46
+msgid "Insert components"
+msgstr "插入组件"
+
+#: superset/templates/appbuilder/general/security/login.py:46
+msgid "Colors"
+msgstr "颜色"
+
+#: superset/templates/appbuilder/general/security/login.py:46
+msgid "Save changes"
+msgstr "保存更改"
+
+#: superset/templates/appbuilder/general/security/login.py:46
+msgid "Switch to view mode"
+msgstr "切换到视图模式"
+
+#: superset/templates/appbuilder/general/security/login.py:46
+msgid "Edit dashboard"
+msgstr "编辑看板"
+
+#: superset/templates/appbuilder/general/security/login.py:46
+msgid "Your charts & filters"
+msgstr "你的图表和过滤"
+
+#: superset/templates/appbuilder/general/security/login.py:46
+msgid "Your charts and filters"
+msgstr "你的图表和过滤"
+
+#: superset/templates/appbuilder/general/security/login.py:46
+msgid "Filter your charts"
+msgstr "过滤你的图表"
+
+#: superset/templates/appbuilder/general/security/login.py:46
+msgid "Tabs"
+msgstr "选项卡"
+
+#: superset/templates/appbuilder/general/security/login.py:46
+msgid "Row"
+msgstr "行"
+
+#: superset/templates/appbuilder/general/security/login.py:46
+msgid "Published"
+msgstr "已发布"
+
+#: superset/assets/src/components/EditableTitle.jsx:105
+msgid "click to edit"
+msgstr "点击编辑"
+
+#: superset/assets/src/components/EditableTitle.jsx:105
+msgid "Expand/collapse datasource configuration"
+msgstr "展开/折叠数据源配置"
+
+#: superset/assets/src/components/EditableTitle.jsx:105
+msgid "Header"
+msgstr "表头"
+
+#: superset/assets/src/components/EditableTitle.jsx:105
+msgid "Divider"
+msgstr "分割线"
+
+#: superset/assets/src/components/EditableTitle.jsx:105
+msgid "Markdown"
+msgstr "Markdown标记"

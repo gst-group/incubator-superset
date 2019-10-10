@@ -67,7 +67,7 @@ export default class PublishedStatus extends React.Component {
       if (this.props.canEdit && this.props.canSave) {
         return (
           <TooltipWrapper
-            label="Unpublished Dashboard"
+            label="{t('Unpublished Dashboard')}"
             placement="bottom"
             tooltip={draftButtonTooltip}
           >
@@ -77,18 +77,18 @@ export default class PublishedStatus extends React.Component {
                 this.togglePublished();
               }}
             >
-              Draft
+              {t("Draft")}
             </button>
           </TooltipWrapper>
         );
       }
       return (
         <TooltipWrapper
-          label="Unpublished Dashboard"
+          label="{t('Unpublished Dashboard')}"
           placement="bottom"
           tooltip={draftDivTooltip}
         >
-          <div style={divStyle}>Draft</div>
+          <div style={divStyle}>{t("Draft")}</div>
         </TooltipWrapper>
       );
     }
@@ -97,7 +97,7 @@ export default class PublishedStatus extends React.Component {
     else if (this.props.canEdit && this.props.canSave) {
       return (
         <TooltipWrapper
-          label="Published Dashboard"
+          label="{t('Published Dashboard')}"
           placement="bottom"
           tooltip={publishedTooltip}
         >
@@ -106,8 +106,7 @@ export default class PublishedStatus extends React.Component {
             onClick={() => {
               this.togglePublished();
             }}
-          >
-            Published
+          >{t("Published")}
           </button>
         </TooltipWrapper>
       );

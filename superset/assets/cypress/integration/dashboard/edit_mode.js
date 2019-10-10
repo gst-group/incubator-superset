@@ -17,6 +17,7 @@
  * under the License.
  */
 import { WORLD_HEALTH_DASHBOARD } from './dashboard.helper';
+import { t } from '@superset-ui/translation';
 
 export default () => describe('edit mode', () => {
   beforeEach(() => {
@@ -33,7 +34,7 @@ export default () => describe('edit mode', () => {
       cy.route('POST', boxplotRequest).as('boxplotRequest');
     });
 
-    cy.get('.dashboard-header').contains('Edit dashboard').click();
+    cy.get('.dashboard-header').contains(t('Edit dashboard')).click();
   });
 
   it('remove, and add chart flow', () => {
@@ -49,14 +50,14 @@ export default () => describe('edit mode', () => {
     });
 
     // open charts list
-    cy.get('.component-layer').contains('Your charts & filters').click();
+    cy.get('.component-layer').contains(t('Your charts & filters')).click();
 
     // find box plot is available from list
-    cy.get('.slices-layer').find('.chart-card-container').contains('Box plot');
+    cy.get('.slices-layer').find('.chart-card-container').contains(t('Box plot'));
 
     // drag-n-drop
     const dataTransfer = { data: {} };
-    cy.get('.dragdroppable').contains('Box plot')
+    cy.get('.dragdroppable').contains(t('Box plot'))
       .trigger('mousedown', { which: 1 })
       .trigger('dragstart', { dataTransfer })
       .trigger('drag', {});
@@ -70,12 +71,12 @@ export default () => describe('edit mode', () => {
     cy.get('.grid-container .box_plot').should('be.exist');
 
     // should show Save changes button
-    cy.get('.dashboard-header .button-container').contains('Save changes');
+    cy.get('.dashboard-header .button-container').contains(t('Save changes'));
 
     // undo 2 steps
     cy.get('.dashboard-header .undo-action').click().click();
 
     // no changes, can switch to view mode
-    cy.get('.dashboard-header .button-container').contains('Switch to view mode').click();
+    cy.get('.dashboard-header .button-container').contains(t('Switch to view mode')).click();
   });
 });
