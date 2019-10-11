@@ -33,7 +33,7 @@ class MySecurityManager(SupersetSecurityManager):
     # the other fields to blank.
                 username=username,
                 first_name=username.split('@')[0],
-                last_name='-',
+                last_name='',
                 email=username,
                 role=self.find_role(self.auth_user_registration_role))
 
