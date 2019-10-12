@@ -5549,3 +5549,45 @@ msgstr "分割线"
 #: superset/assets/src/components/EditableTitle.jsx:105
 msgid "Markdown"
 msgstr "Markdown标记"
+
+#: superset/assets/src/components/EditableTitle.jsx:105
+msgid "Control labeled "
+msgstr "控件标题"
+
+#: superset/assets/src/components/EditableTitle.jsx:105
+msgid "Polygon Encoding"
+msgstr "线的编码"
+
+#: superset/assets/src/components/EditableTitle.jsx:105
+msgid "This section contains validation errors"
+msgstr "此处有校验错误"
+
+#: superset/assets/src/components/EditableTitle.jsx:105
+msgid "Show Labels"
+msgstr "显示标签"
+
+#: superset/assets/src/components/EditableTitle.jsx:105
+msgid "Whether to display the labels. Note that the label only displays when the the 5% threshold."
+msgstr "是否显示标签？标签只显示百分之五阀值。"
+
+#: superset/assets/src/components/EditableTitle.jsx:105
+msgid "Share Dashboard"
+msgstr "分享看板"
+
+#: superset/assets/src/components/EditableTitle.jsx:105
+msgid "Share dashboard"
+msgstr "分享看板"
+
+
+#: superset/assets/src/components/EditableTitle.jsx:105
+msgid "Auto-refresh dashboard"
+msgstr "自动刷新看板"
+
+#: superset/assets/src/components/EditableTitle.jsx:105
+msgid "Set auto-refresh interval"
+msgstr "设置自动刷新时间间隔"
+
+#: superset/assets/src/components/EditableTitle.jsx:105
+msgid "Edit dashboard metadata"
+msgstr "编辑看板元数据"
+

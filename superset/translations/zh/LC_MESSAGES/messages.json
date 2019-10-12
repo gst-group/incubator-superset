@@ -3455,9 +3455,37 @@
     ],
     "Divider":[
       "分割线"
+    ],
+    "Control labeled ":[
+      "控件标题"
+    ],
+    "Polygon Encoding":[
+      "线的编码"
+    ],
+    "This section contains validation errors":[
+      "此处有校验错误"
+    ],
+    "Show Labels":[
+      "显示标签"
+    ],
+    "Whether to display the labels. Note that the label only displays when the the 5% threshold.":[
+      "是否显示标签？标签只显示百分之五阀值。"
+    ],
+    "Share Dashboard":[
+      "分享看板"
+    ],
+    "Share dashboard":[
+      "分享看板"
+    ],
+    "Auto-refresh dashboard":[
+      "自动刷新看板"
+    ],
+    "Set auto-refresh interval":[
+      "设置自动刷新时间间隔"
+    ],
+    "Edit dashboard metadata":[
+      "编辑看板元数据"
     ]
-
-    
     }
   }
 }
