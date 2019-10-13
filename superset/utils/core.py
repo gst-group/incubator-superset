@@ -1008,7 +1008,6 @@ def get_or_create_table(database_name, table_name, *args, **kwargs):
     return table
 
 
-
 def get_or_create_db(database_name, sqlalchemy_uri, *args, **kwargs):
     from superset import db
     from superset.models import core as models
@@ -1019,6 +1018,7 @@ def get_or_create_db(database_name, sqlalchemy_uri, *args, **kwargs):
     if not database:
         logging.info(f"Creating database reference for {database_name}")
         database = models.Database(database_name=database_name, *args, **kwargs)
+        database.allow_csv_upload = True
         db.session.add(database)
 
     database.set_sqlalchemy_uri(sqlalchemy_uri)
