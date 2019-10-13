@@ -85,7 +85,7 @@ export default class AdhocMetricEditPopoverTitle extends React.Component {
             inputRef={this.refFunc}
           /> :
           <span>
-            {adhocMetric.hasCustomLabel ? adhocMetric.label : 'My Metric'}
+            {adhocMetric.hasCustomLabel ? adhocMetric.label : '我的度量'}
             &nbsp;
             <i className="fa fa-pencil" style={{ color: this.state.isHovered ? 'black' : 'grey' }} />
           </span>

@@ -507,7 +507,8 @@ class TableViz(BaseViz):
     """A basic html table that is sortable and searchable"""
 
     viz_type = "table"
-    verbose_name = _("Table View")
+    # verbose_name = _("Table View")
+    verbose_name = "表视图"
     credits = 'a <a href="https://github.com/airbnb/superset">Superset</a> original'
     is_timeseries = False
     enforce_numerical_metrics = False
@@ -608,7 +609,8 @@ class TimeTableViz(BaseViz):
     """A data table with rich time-series related columns"""
 
     viz_type = "time_table"
-    verbose_name = _("Time Table View")
+    # verbose_name = _("Time Table View")
+    verbose_name = "时间表视图"
     credits = 'a <a href="https://github.com/airbnb/superset">Superset</a> original'
     is_timeseries = True
 
@@ -647,7 +649,8 @@ class PivotTableViz(BaseViz):
     """A pivot table view, define your rows, columns and metrics"""
 
     viz_type = "pivot_table"
-    verbose_name = _("Pivot Table")
+    # verbose_name = _("Pivot Table")
+    verbose_name = "透视表"
     credits = 'a <a href="https://github.com/airbnb/superset">Superset</a> original'
     is_timeseries = False
 
@@ -719,7 +722,8 @@ class MarkupViz(BaseViz):
     """Use html or markdown to create a free form widget"""
 
     viz_type = "markup"
-    verbose_name = _("Markup")
+    # verbose_name = _("Markup")
+    verbose_name = "标记"
     is_timeseries = False
 
     def query_obj(self):
@@ -743,7 +747,8 @@ class SeparatorViz(MarkupViz):
     """Use to create section headers in a dashboard, similar to `Markup`"""
 
     viz_type = "separator"
-    verbose_name = _("Separator")
+    # verbose_name = _("Separator")
+    verbose_name = "分隔符"
 
 
 class WordCloudViz(BaseViz):
@@ -755,7 +760,8 @@ class WordCloudViz(BaseViz):
     """
 
     viz_type = "word_cloud"
-    verbose_name = _("Word Cloud")
+    # verbose_name = _("Word Cloud")
+    verbose_name = "词汇云"
     is_timeseries = False
 
     def query_obj(self):
@@ -769,7 +775,8 @@ class TreemapViz(BaseViz):
     """Tree map visualisation for hierarchical data."""
 
     viz_type = "treemap"
-    verbose_name = _("Treemap")
+    # verbose_name = _("Treemap")
+    verbose_name = "树状图"
     credits = '<a href="https://d3js.org">d3.js</a>'
     is_timeseries = False
 
@@ -798,7 +805,8 @@ class CalHeatmapViz(BaseViz):
     """Calendar heatmap."""
 
     viz_type = "cal_heatmap"
-    verbose_name = _("Calendar Heatmap")
+    # verbose_name = _("Calendar Heatmap")
+    verbose_name = "时间热力图"
     credits = "<a href=https://github.com/wa0x6e/cal-heatmap>cal-heatmap</a>"
     is_timeseries = True
 
@@ -870,7 +878,8 @@ class BoxPlotViz(NVD3Viz):
     """Box plot viz from ND3"""
 
     viz_type = "box_plot"
-    verbose_name = _("Box Plot")
+    # verbose_name = _("Box Plot")
+    verbose_name = "箱线图"
     sort_series = False
     is_timeseries = True
 
@@ -952,7 +961,8 @@ class BubbleViz(NVD3Viz):
     """Based on the NVD3 bubble chart"""
 
     viz_type = "bubble"
-    verbose_name = _("Bubble Chart")
+    # verbose_name = _("Bubble Chart")
+    verbose_name = "气泡图"
     is_timeseries = False
 
     def query_obj(self):
@@ -996,7 +1006,8 @@ class BulletViz(NVD3Viz):
     """Based on the NVD3 bullet chart"""
 
     viz_type = "bullet"
-    verbose_name = _("Bullet Chart")
+    # verbose_name = _("Bullet Chart")
+    verbose_name = "子弹图"
     is_timeseries = False
 
     def query_obj(self):
@@ -1042,7 +1053,8 @@ class BigNumberViz(BaseViz):
     """Put emphasis on a single metric with this big number viz"""
 
     viz_type = "big_number"
-    verbose_name = _("Big Number with Trendline")
+    # verbose_name = _("Big Number with Trendline")
+    verbose_name = "数字和趋势线"
     credits = 'a <a href="https://github.com/airbnb/superset">Superset</a> original'
     is_timeseries = True
 
@@ -1061,7 +1073,8 @@ class BigNumberTotalViz(BaseViz):
     """Put emphasis on a single metric with this big number viz"""
 
     viz_type = "big_number_total"
-    verbose_name = _("Big Number")
+    # verbose_name = _("Big Number")
+    verbose_name = "数字"
     credits = 'a <a href="https://github.com/airbnb/superset">Superset</a> original'
     is_timeseries = False
 
@@ -1083,7 +1096,8 @@ class NVD3TimeSeriesViz(NVD3Viz):
     """A rich line chart component with tons of options"""
 
     viz_type = "line"
-    verbose_name = _("Time Series - Line Chart")
+    # verbose_name = _("Time Series - Line Chart")
+    verbose_name = "时间序列-折线图"
     sort_series = False
     is_timeseries = True
 
@@ -1281,7 +1295,8 @@ class MultiLineViz(NVD3Viz):
     """Pile on multiple line charts"""
 
     viz_type = "line_multi"
-    verbose_name = _("Time Series - Multiple Line Charts")
+    # verbose_name = _("Time Series - Multiple Line Charts")
+    verbose_name = "时间序列-多线图"
 
     is_timeseries = True
 
@@ -1311,7 +1326,8 @@ class NVD3DualLineViz(NVD3Viz):
     """A rich line chart with dual axis"""
 
     viz_type = "dual_line"
-    verbose_name = _("Time Series - Dual Axis Line Chart")
+    # verbose_name = _("Time Series - Dual Axis Line Chart")
+    verbose_name = "时间序列-双轴线图"
     sort_series = False
     is_timeseries = True
 
@@ -1381,7 +1397,8 @@ class NVD3TimeSeriesBarViz(NVD3TimeSeriesViz):
 
     viz_type = "bar"
     sort_series = True
-    verbose_name = _("Time Series - Bar Chart")
+    # verbose_name = _("Time Series - Bar Chart")
+    verbose_name = "时间序列 - 柱状图"
 
 
 class NVD3TimePivotViz(NVD3TimeSeriesViz):
@@ -1390,7 +1407,8 @@ class NVD3TimePivotViz(NVD3TimeSeriesViz):
 
     viz_type = "time_pivot"
     sort_series = True
-    verbose_name = _("Time Series - Period Pivot")
+    # verbose_name = _("Time Series - Period Pivot")
+    verbose_name = "时间序列 - 周期透视表"
 
     def query_obj(self):
         d = super().query_obj()
@@ -1434,7 +1452,8 @@ class NVD3CompareTimeSeriesViz(NVD3TimeSeriesViz):
     """A line chart component where you can compare the % change over time"""
 
     viz_type = "compare"
-    verbose_name = _("Time Series - Percent Change")
+    # verbose_name = _("Time Series - Percent Change")
+    verbose_name = "时间序列 - 百分比变化"
 
 
 class NVD3TimeSeriesStackedViz(NVD3TimeSeriesViz):
@@ -1442,7 +1461,8 @@ class NVD3TimeSeriesStackedViz(NVD3TimeSeriesViz):
     """A rich stack area chart"""
 
     viz_type = "area"
-    verbose_name = _("Time Series - Stacked")
+    # verbose_name = _("Time Series - Stacked")
+    verbose_name = "时间序列 - 堆积图"
     sort_series = True
 
 
@@ -1451,7 +1471,8 @@ class DistributionPieViz(NVD3Viz):
     """Annoy visualization snobs with this controversial pie chart"""
 
     viz_type = "pie"
-    verbose_name = _("Distribution - NVD3 - Pie Chart")
+    # verbose_name = _("Distribution - NVD3 - Pie Chart")
+    verbose_name = "分布 - NVD3 - 饼图"
     is_timeseries = False
 
     def get_data(self, df):
@@ -1468,7 +1489,8 @@ class HistogramViz(BaseViz):
     """Histogram"""
 
     viz_type = "histogram"
-    verbose_name = _("Histogram")
+    # verbose_name = _("Histogram")
+    verbose_name = "直方图"
     is_timeseries = False
 
     def query_obj(self):
@@ -1521,7 +1543,8 @@ class DistributionBarViz(DistributionPieViz):
     """A good old bar chart"""
 
     viz_type = "dist_bar"
-    verbose_name = _("Distribution - Bar Chart")
+    # verbose_name = _("Distribution - Bar Chart")
+    verbose_name = "分布 - 柱状图"
     is_timeseries = False
 
     def query_obj(self):
@@ -1576,7 +1599,8 @@ class SunburstViz(BaseViz):
     """A multi level sunburst chart"""
 
     viz_type = "sunburst"
-    verbose_name = _("Sunburst")
+    # verbose_name = _("Sunburst")
+    verbose_name = "环状层次图"
     is_timeseries = False
     credits = (
         "Kerry Rodden "
@@ -1608,7 +1632,8 @@ class SankeyViz(BaseViz):
     """A Sankey diagram that requires a parent-child dataset"""
 
     viz_type = "sankey"
-    verbose_name = _("Sankey")
+    # verbose_name = _("Sankey")
+    verbose_name = "蛇形图"
     is_timeseries = False
     credits = '<a href="https://www.npmjs.com/package/d3-sankey">d3-sankey on npm</a>'
 
@@ -1661,7 +1686,8 @@ class DirectedForceViz(BaseViz):
     """An animated directed force layout graph visualization"""
 
     viz_type = "directed_force"
-    verbose_name = _("Directed Force Layout")
+    # verbose_name = _("Directed Force Layout")
+    verbose_name = "有向图"
     credits = 'd3noob @<a href="http://bl.ocks.org/d3noob/5141278">bl.ocks.org</a>'
     is_timeseries = False
 
@@ -1682,7 +1708,8 @@ class ChordViz(BaseViz):
     """A Chord diagram"""
 
     viz_type = "chord"
-    verbose_name = _("Directed Force Layout")
+    # verbose_name = _("Directed Force Layout")
+    verbose_name = "有向图"
     credits = '<a href="https://github.com/d3/d3-chord">Bostock</a>'
     is_timeseries = False
 
@@ -1712,7 +1739,8 @@ class CountryMapViz(BaseViz):
     """A country centric"""
 
     viz_type = "country_map"
-    verbose_name = _("Country Map")
+    # verbose_name = _("Country Map")
+    verbose_name = "国家地图"
     is_timeseries = False
     credits = "From bl.ocks.org By john-guerra"
 
@@ -1739,7 +1767,8 @@ class WorldMapViz(BaseViz):
     """A country centric world map"""
 
     viz_type = "world_map"
-    verbose_name = _("World Map")
+    # verbose_name = _("World Map")
+    verbose_name = "世界地图"
     is_timeseries = False
     credits = 'datamaps on <a href="https://www.npmjs.com/package/datamaps">npm</a>'
 
@@ -1790,7 +1819,8 @@ class FilterBoxViz(BaseViz):
     """A multi filter, multi-choice filter box to make dashboards interactive"""
 
     viz_type = "filter_box"
-    verbose_name = _("Filters")
+    # verbose_name = _("Filters")
+    verbose_name = "过滤"
     is_timeseries = False
     credits = 'a <a href="https://github.com/airbnb/superset">Superset</a> original'
     cache_type = "get_data"
@@ -1844,7 +1874,8 @@ class IFrameViz(BaseViz):
     """You can squeeze just about anything in this iFrame component"""
 
     viz_type = "iframe"
-    verbose_name = _("iFrame")
+    # verbose_name = _("iFrame")
+    verbose_name = "内嵌框架"
     credits = 'a <a href="https://github.com/airbnb/superset">Superset</a> original'
     is_timeseries = False
 
@@ -1867,7 +1898,8 @@ class ParallelCoordinatesViz(BaseViz):
     """
 
     viz_type = "para"
-    verbose_name = _("Parallel Coordinates")
+    # verbose_name = _("Parallel Coordinates")
+    verbose_name = "平行坐标"
     credits = (
         '<a href="https://syntagmatic.github.io/parallel-coordinates/">'
         "Syntagmatic's library</a>"
@@ -1889,7 +1921,8 @@ class HeatmapViz(BaseViz):
     """A nice heatmap visualization that support high density through canvas"""
 
     viz_type = "heatmap"
-    verbose_name = _("Heatmap")
+    # verbose_name = _("Heatmap")
+    verbose_name = "热力图"
     is_timeseries = False
     credits = (
         'inspired from mbostock @<a href="http://bl.ocks.org/mbostock/3074470">'
@@ -1942,7 +1975,8 @@ class HorizonViz(NVD3TimeSeriesViz):
     """
 
     viz_type = "horizon"
-    verbose_name = _("Horizon Charts")
+    # verbose_name = _("Horizon Charts")
+    verbose_name = "水平图"
     credits = (
         '<a href="https://www.npmjs.com/package/d3-horizon-chart">'
         "d3-horizon-chart</a>"
@@ -1954,7 +1988,8 @@ class MapboxViz(BaseViz):
     """Rich maps made with Mapbox"""
 
     viz_type = "mapbox"
-    verbose_name = _("Mapbox")
+    # verbose_name = _("Mapbox")
+    verbose_name = "箱图"
     is_timeseries = False
     credits = "<a href=https://www.mapbox.com/mapbox-gl-js/api/>Mapbox GL JS</a>"
 

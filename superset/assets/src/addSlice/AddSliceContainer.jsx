@@ -77,9 +77,11 @@ export default class AddSliceContainer extends React.PureComponent {
   render() {
     return (
       <div className="container">
-        <Panel header={<h3>{t('Create a new chart')}</h3>}>
+        {/*<Panel header={<h3>{t('Create a new chart')}</h3>}>*/}
+        <Panel header={<h3>创建新图表</h3>}>
           <div>
-            <p>{t('Choose a datasource')}</p>
+            {/*<p>{t('Choose a datasource')}</p>*/}
+            <p>选择数据源</p>
             <div style={styleSelectWidth}>
               <Select
                 clearable={false}
@@ -87,23 +89,27 @@ export default class AddSliceContainer extends React.PureComponent {
                 name="select-datasource"
                 onChange={this.changeDatasource}
                 options={this.props.datasources}
-                placeholder={t('Choose a datasource')}
+                // placeholder={t('Choose a datasource')}
+                placeholder="选择数据源"
                 style={styleSelectWidth}
                 value={this.state.datasourceValue}
                 width={600}
               />
             </div>
             <p className="text-muted">
-              {t(
-                'If the datasource you are looking for is not ' +
-                'available in the list, ' +
-                'follow the instructions on the how to add it on the ')}
-              <a href="https://superset.apache.org/tutorial.html">{t('Superset tutorial')}</a>
+              {/*{t(*/}
+              {/*  'If the datasource you are looking for is not ' +*/}
+              {/*  'available in the list, ' +*/}
+              {/*  'follow the instructions on the how to add it on the ')}*/}
+              如果您正在寻找的数据源在列表中不可用，请按照说明进行添加
+              {/*<a href="https://superset.apache.org/tutorial.html">{t('Superset tutorial')}</a>*/}
+              <a href="https://superset.apache.org/tutorial.html">Superset 教程</a>
             </p>
           </div>
           <br />
           <div>
-            <p>{t('Choose a visualization type')}</p>
+            {/*<p>{t('Choose a visualization type')}</p>*/}
+            <p>选择可视化类型</p>
             <VizTypeControl
               name="select-vis-type"
               onChange={this.changeVisType}
@@ -117,7 +123,8 @@ export default class AddSliceContainer extends React.PureComponent {
             disabled={this.isBtnDisabled()}
             onClick={this.gotoSlice}
           >
-            {t('Create new chart')}
+            {/*{t('Create new chart')}*/}
+            创建新图表
           </Button>
           <br /><br />
         </Panel>

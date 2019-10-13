@@ -168,7 +168,8 @@ export default class VizTypeControl extends React.PureComponent {
           bsSize="lg"
         >
           <Modal.Header closeButton>
-            <Modal.Title>{t('Select a visualization type')}</Modal.Title>
+            {/*<Modal.Title>{t('Select a visualization type')}</Modal.Title>*/}
+            <Modal.Title>选择一个可视化类型</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <div className="viztype-control-search-box">
@@ -176,7 +177,8 @@ export default class VizTypeControl extends React.PureComponent {
                 inputRef={this.setSearchRef}
                 type="text"
                 value={filter}
-                placeholder={t('Search')}
+                // placeholder={t('Search')}
+                placeholder="搜索"
                 onChange={this.changeSearch}
               />
             </div>
