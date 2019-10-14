@@ -1229,6 +1229,10 @@ msgstr "另存为"
 msgid "Force Refresh"
 msgstr "强制刷新"
 
+#: superset/assets/src/dashboard/components/Controls.jsx:131
+msgid "Force refresh"
+msgstr "强制刷新"
+
 #: superset/assets/src/dashboard/components/Controls.jsx:132
 msgid "Force refresh the whole dashboard"
 msgstr "强制刷新整个仪表板"
@@ -5590,4 +5594,32 @@ msgstr "设置自动刷新时间间隔"
 #: superset/assets/src/components/EditableTitle.jsx:105
 msgid "Edit dashboard metadata"
 msgstr "编辑看板元数据"
+
+#: superset/assets/src/components/EditableTitle.jsx:105
+msgid "Edit chart metadata"
+msgstr "编辑图表元数据"
+
+#: superset/assets/src/components/EditableTitle.jsx:105
+msgid "Share chart"
+msgstr "分享图表"
+
+#: superset/assets/src/components/EditableTitle.jsx:105
+msgid "This dashboard is not published, it will not show up in the list of dashboards. Click here to publish this dashboard."
+msgstr "这个看板未发布，不会在看板列表中显示。点击此处可以发布该看板。"
+
+#: superset/assets/src/components/EditableTitle.jsx:105
+msgid "This dashboard is not published which means it will not show up in the list of dashboards. Favorite it to see it there or access it by using the URL directly."
+msgstr "这个看板未发布，不会在看板列表中显示。点击收藏即可在看板列表中显示，你也可以直接用网址访问。"
+
+#: superset/assets/src/components/EditableTitle.jsx:105
+msgid "This dashboard is published. Click to make it a draft."
+msgstr "这个看板已发布。点击可以转成草稿。"
+
+#: superset/assets/src/components/EditableTitle.jsx:105
+msgid "New header"
+msgstr "新表头"
+
+#: superset/assets/src/components/EditableTitle.jsx:105
+msgid "New Tab"
+msgstr "新标签页"
 

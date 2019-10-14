@@ -71,7 +71,7 @@ const markdownPlaceHolder = `# ✨Markdown
 
 <br />
 
-Click here to edit [markdown](https://bit.ly/1dQOfRK)`;
+点击此处编辑 [markdown](https://bit.ly/1dQOfRK)`;
 
 class Markdown extends React.PureComponent {
   constructor(props) {

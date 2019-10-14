@@ -808,6 +808,9 @@
       "Force Refresh": [
         "强制刷新"
       ],
+      "Force refresh": [
+        "强制刷新"
+      ],
       "Force refresh the whole dashboard": [
         "强制刷新整个看板"
       ],
@@ -3485,7 +3488,27 @@
     ],
     "Edit dashboard metadata":[
       "编辑看板元数据"
-    ]
+    ],
+    "Edit chart metadata":[
+      "编辑图表元数据"
+    ],
+    "Share chart":[
+      "分享图表"
+    ],
+    "This dashboard is not published, it will not show up in the list of dashboards. Click here to publish this dashboard.":[
+      "这个看板未发布，不会在看板列表中显示。点击此处可以发布该看板。"
+    ],
+    "This dashboard is not published which means it will not show up in the list of dashboards. Favorite it to see it there or access it by using the URL directly.":[
+      "这个看板未发布，不会在看板列表中显示。点击收藏即可在看板列表中显示，你也可以直接用网址访问。"
+    ],
+    "This dashboard is published. Click to make it a draft.":[
+      "这个看板已发布。点击可以转成草稿。"
+    ],
+    "New header":[
+      "新表头"],
+    "New Tab":[
+      "新标签页"]
+
     }
   }
 }
